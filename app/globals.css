@@ -1,0 +1,71 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Arcadia Senior Living Brand Tokens */
+  --background: #FFFCF9;
+  --foreground: #1a2e26;
+  --card: #ffffff;
+  --card-foreground: #1a2e26;
+  --popover: #ffffff;
+  --popover-foreground: #1a2e26;
+  --primary: #4a7c59;
+  --primary-foreground: #ffffff;
+  --primary-dark: #2d4a3e;
+  --secondary: #f0f5f1;
+  --secondary-foreground: #2d4a3e;
+  --muted: #f0f5f1;
+  --muted-foreground: #5a7a6a;
+  --accent: #4a7c59;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: #d8e8de;
+  --input: #d8e8de;
+  --ring: #4a7c59;
+  --radius: 0.5rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-nunito);
+  --font-serif: var(--font-marcellus);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    background-color: #FFFCF9;
+  }
+}
