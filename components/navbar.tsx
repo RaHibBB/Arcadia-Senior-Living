@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X, ChevronDown } from 'lucide-react'
 
 export default function Navbar() {
@@ -27,7 +28,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <img src="/images/logo-dark.png" className="h-10 w-auto" alt="Arcadia Senior Living" />
+            <Image src="/images/logo-dark.png" width={200} height={40} className="h-10 w-auto" alt="Arcadia Senior Living" />
           </Link>
 
           {/* Desktop Nav */}

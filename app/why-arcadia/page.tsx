@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { Activity, Brain, Users, Heart } from 'lucide-react'
 import CommunityCarousel from '@/components/community-carousel'
 
@@ -6,6 +7,26 @@ export const metadata: Metadata = {
   title: 'Why Arcadia Senior Living | Care, Purpose & Happiness for Seniors',
   description:
     'Learn why families choose Arcadia Senior Living. Our philosophy of Care, Purpose, and Happiness guides everything we do — from whole-person wellness to keeping seniors connected to their communities.',
+  alternates: {
+    canonical: 'https://arcadiaretirement.com/why-arcadia',
+  },
+  openGraph: {
+    title: 'Why Arcadia Senior Living | Care, Purpose & Happiness for Seniors',
+    description:
+      'Learn why families choose Arcadia Senior Living. Our philosophy of Care, Purpose, and Happiness guides everything we do — from whole-person wellness to keeping seniors connected to their communities.',
+    url: 'https://arcadiaretirement.com/why-arcadia',
+    siteName: 'Arcadia Senior Living',
+    locale: 'en_US',
+    type: 'website',
+    images: [{ url: '/images/staff.jpg', width: 1200, height: 630, alt: 'Why Arcadia Senior Living' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Why Arcadia Senior Living | Care, Purpose & Happiness for Seniors',
+    description:
+      'Learn why families choose Arcadia Senior Living. Our philosophy of Care, Purpose, and Happiness guides everything we do.',
+    images: ['/images/staff.jpg'],
+  },
 }
 
 const pillars = [
@@ -67,11 +88,10 @@ export default function WhyArcadiaPage() {
 
       {/* ── HERO ── */}
       <section className="relative w-full bg-[#2d5a5c] overflow-hidden">
-        <img
-          src="/images/staff.jpg"
-          alt=""
+        <div
+          className="absolute inset-0 opacity-[0.14]"
+          style={{ backgroundImage: "url('/images/staff.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.14]"
         />
         <div className="relative z-10 py-32 md:py-44 text-center px-6">
           <p className="text-[11px] uppercase tracking-[0.5em] text-white/80 mb-6">Our Promise</p>
@@ -98,7 +118,6 @@ export default function WhyArcadiaPage() {
                 Our Philosophy of Care
               </h2>
 
-              {/* Pill badges */}
               <div className="flex flex-wrap gap-2.5 mb-8">
                 {pillars.map(({ label }) => (
                   <span
@@ -116,7 +135,6 @@ export default function WhyArcadiaPage() {
                 and Happiness. These three pillars form the foundation of how we serve seniors and their families.
               </p>
 
-              {/* Pillar items */}
               <div className="space-y-5 mb-8">
                 {pillars.map(({ label, body }) => (
                   <div key={label} className="pl-5 border-l-2 border-[#4a7c7e]">
@@ -129,7 +147,7 @@ export default function WhyArcadiaPage() {
                 ))}
               </div>
 
-              <p className="text-[#777] text-lg leading-relaxed italic border-l-0 pl-0">
+              <p className="text-[#777] text-lg leading-relaxed italic">
                 &ldquo;This philosophy isn&apos;t just words — it&apos;s the heartbeat of our communities,
                 reflected in every service, interaction, and smile.&rdquo;
               </p>
@@ -137,11 +155,15 @@ export default function WhyArcadiaPage() {
 
             {/* Image */}
             <div className="relative">
-              <img
-                src="/images/assisted-living.jpg"
-                alt="Personalized care at Arcadia"
-                className="w-full h-[480px] object-cover"
-              />
+              <div className="relative w-full h-[480px]">
+                <Image
+                  src="/images/assisted-living.jpg"
+                  fill
+                  className="object-cover"
+                  alt="Personalized care at Arcadia Senior Living"
+                  sizes="(max-width: 1024px) 100vw, 400px"
+                />
+              </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#4a7c7e]/12 -z-10" />
               <div className="absolute -top-4 -left-4 w-16 h-16 bg-[#2d5a5c]/8 -z-10" />
             </div>
@@ -150,10 +172,12 @@ export default function WhyArcadiaPage() {
           {/* Logo divider */}
           <div className="flex items-center gap-6 mt-16 md:mt-20">
             <div className="flex-1 h-px bg-gray-200" />
-            <img
+            <Image
               src="/images/logo-box.png"
-              alt="Arcadia Senior Living"
+              width={56}
+              height={56}
               className="h-14 w-auto flex-shrink-0 opacity-75"
+              alt="Arcadia Senior Living"
             />
             <div className="flex-1 h-px bg-gray-200" />
           </div>
@@ -200,14 +224,13 @@ export default function WhyArcadiaPage() {
         <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-12 lg:gap-16 items-start">
 
-            {/* Text panel */}
             <div className="lg:sticky lg:top-28">
               <p className="text-[11px] uppercase tracking-[0.4em] text-[#4a7c7e] mb-4">Our Neighborhoods</p>
               <h2 className="font-serif text-4xl font-light text-[#1a1a1a] mb-3">
                 Community<br />Connected
               </h2>
               <div className="w-10 h-0.5 bg-[#4a7c7e] mb-5" />
-              <h3 className="font-serif text-lg font-light text-[#555] mb-5 leading-snug">
+              <h3 className="font-serif text-xl font-light text-[#555] mb-5 leading-snug">
                 Staying Connected to What Matters Most
               </h3>
               <p className="text-[#555] text-lg leading-relaxed">
@@ -217,7 +240,6 @@ export default function WhyArcadiaPage() {
               </p>
             </div>
 
-            {/* Carousel */}
             <CommunityCarousel />
           </div>
         </div>
@@ -234,12 +256,13 @@ export default function WhyArcadiaPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-            {/* Map card */}
             <div className="flex flex-col items-center justify-center bg-[#234849] p-10 text-center">
-              <img
+              <Image
                 src="/images/map-oregon-washington.png"
+                width={155}
+                height={195}
+                className="w-full max-w-[155px] h-auto mb-6 opacity-90"
                 alt="Oregon and Washington communities"
-                className="w-full max-w-[155px] mb-6 opacity-90"
               />
               <p className="text-xs uppercase tracking-widest text-white/45 mb-5">
                 Oregon &amp; Washington
@@ -252,7 +275,6 @@ export default function WhyArcadiaPage() {
               </a>
             </div>
 
-            {/* Community cards */}
             {communities.map((c) => (
               <div key={c.name} className="bg-[#234849] p-8 flex flex-col">
                 <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1.5">{c.location}</p>

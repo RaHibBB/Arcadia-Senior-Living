@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Warehouse, Accessibility, PawPrint } from 'lucide-react'
 
 export default function Footer() {
@@ -12,7 +13,7 @@ export default function Footer() {
       <div className="max-w-[1300px] mx-auto px-8 pt-12 pb-8">
         <Link href="/">
           <div className="bg-white inline-block px-5 py-2.5 hover:opacity-90 transition-opacity">
-            <img src="/images/logo-dark.png" className="h-11 w-auto" alt="Arcadia Senior Living" />
+            <Image src="/images/logo-dark.png" width={200} height={44} className="h-11 w-auto" alt="Arcadia Senior Living" />
           </div>
         </Link>
       </div>
@@ -74,7 +75,7 @@ export default function Footer() {
               {[
                 { label: 'Privacy Policy', href: '/privacy' },
                 { label: 'CCPA', href: '/ccpa-cpra' },
-                { label: 'Site Map', href: '/sitemap.xml' },
+                { label: 'Site Map', href: '/sitemap' },
               ].map((l) => (
                 <li key={l.label}>
                   <Link href={l.href} className="text-base text-white/70 hover:text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-all duration-150">

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const slides = [
@@ -24,11 +25,13 @@ export default function CommunityCarousel() {
         {[0, 1].map((offset) => {
           const idx = (current + offset) % total
           return (
-            <div key={idx} className="overflow-hidden">
-              <img
+            <div key={idx} className="relative h-80 overflow-hidden">
+              <Image
                 src={slides[idx].src}
+                fill
+                className="object-cover transition-opacity duration-500"
                 alt={slides[idx].alt}
-                className="w-full h-80 object-cover transition-opacity duration-500"
+                sizes="(max-width: 1200px) 50vw, 580px"
               />
             </div>
           )
@@ -36,11 +39,13 @@ export default function CommunityCarousel() {
       </div>
 
       {/* Mobile: 1 image */}
-      <div className="md:hidden overflow-hidden">
-        <img
+      <div className="relative md:hidden h-72 overflow-hidden">
+        <Image
           src={slides[current].src}
+          fill
+          className="object-cover"
           alt={slides[current].alt}
-          className="w-full h-72 object-cover"
+          sizes="100vw"
         />
       </div>
 

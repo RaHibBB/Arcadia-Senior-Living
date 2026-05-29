@@ -1,15 +1,38 @@
-'use client'
+import type { Metadata } from 'next'
+import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: 'Arcadia Senior Living | Assisted Living & Respite Care in Oregon & Washington',
+  description:
+    'Arcadia Senior Living offers compassionate assisted living and respite care in Portland, OR and Washougal, WA. Locally owned, guided by Care, Purpose, and Happiness.',
+  alternates: {
+    canonical: 'https://arcadiaretirement.com',
+  },
+  openGraph: {
+    title: 'Arcadia Senior Living | Assisted Living & Respite Care',
+    description:
+      'Arcadia Senior Living offers compassionate assisted living and respite care in Portland, OR and Washougal, WA. Locally owned, guided by Care, Purpose, and Happiness.',
+    url: 'https://arcadiaretirement.com',
+    images: [{ url: '/images/hero.jpg', width: 1200, height: 630, alt: 'Arcadia Senior Living' }],
+  },
+  twitter: {
+    images: ['/images/hero.jpg'],
+  },
+}
 
 export default function HomePage() {
   return (
     <main>
 
       {/* ── HERO ── */}
-      <section className="relative w-full overflow-hidden">
-        <img
+      <section className="relative w-full h-[580px] md:h-[700px] overflow-hidden">
+        <Image
           src="/images/hero.jpg"
-          className="w-full h-[580px] md:h-[700px] object-cover object-center"
+          fill
+          priority
+          className="object-cover object-center"
           alt="Arcadia Senior Living community"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-[#2d5a5c]/50 to-[#2d5a5c]/92" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
@@ -100,11 +123,13 @@ export default function HomePage() {
               { img: '/images/respite-care.jpg', title: 'Community Connected', body: 'Arcadia fosters belonging with vibrant events, shared spaces, and a culture of kindness and inclusion.', href: '/why-arcadia/#community' },
             ].map((item) => (
               <div key={item.title} className="bg-gray-50 overflow-hidden group">
-                <div className="overflow-hidden">
-                  <img
+                <div className="relative h-64 overflow-hidden">
+                  <Image
                     src={item.img}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
                     alt={item.title}
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
                 <div className="p-6 border-b-2 border-transparent group-hover:border-[#4a7c7e] transition-colors duration-300">
@@ -139,11 +164,13 @@ export default function HomePage() {
               { img: '/images/respite-care.jpg', title: 'Respite Care', body: 'Our respite care provides short-term support in a welcoming community, offering families peace of mind and residents comfort, care, and connection.', href: '/services/respite-care' },
             ].map((s) => (
               <div key={s.title} className="group">
-                <div className="overflow-hidden mb-5">
-                  <img
+                <div className="relative h-72 overflow-hidden mb-5">
+                  <Image
                     src={s.img}
-                    className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
                     alt={s.title}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <h3 className="font-serif text-2xl font-light text-[#1a1a1a] mb-2">{s.title}</h3>
@@ -169,7 +196,13 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white border border-gray-100 p-8 flex flex-col items-center justify-center">
-              <img src="/images/map-oregon-washington.png" className="w-full max-w-[175px]" alt="Oregon and Washington map" />
+              <Image
+                src="/images/map-oregon-washington.png"
+                width={175}
+                height={220}
+                className="w-full max-w-[175px] h-auto"
+                alt="Oregon and Washington map"
+              />
               <p className="text-xs uppercase tracking-widest text-gray-400 mt-5 text-center">
                 Oregon &amp; Washington
               </p>
@@ -219,13 +252,16 @@ export default function HomePage() {
               </a>
             </div>
 
-            <div className="lg:w-[55%]">
-              <img
+            <div className="relative lg:w-[55%] h-[420px]">
+              <Image
                 src="/images/careers.jpg"
-                className="w-full h-[420px] object-cover"
-                alt="Careers at Arcadia"
+                fill
+                className="object-cover"
+                alt="Careers at Arcadia Senior Living"
+                sizes="(max-width: 1024px) 100vw, 55vw"
               />
             </div>
+
           </div>
         </div>
       </section>
