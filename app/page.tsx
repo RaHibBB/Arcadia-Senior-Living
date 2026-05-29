@@ -13,19 +13,19 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-[#2d5a5c]/50 to-[#2d5a5c]/92" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
-          <p className="tracking-[0.55em] uppercase text-xs font-light text-white/60 mb-5">
+          <p className="tracking-[0.55em] uppercase text-sm font-light text-white/90 mb-5">
             Welcome To
           </p>
-          <h1 className="font-serif text-5xl md:text-[4.5rem] font-light leading-[1.08] mb-5">
+          <h1 className="font-serif text-6xl md:text-[5.5rem] font-light leading-[1.08] mb-5">
             Arcadia<br />Senior Living
           </h1>
-          <div className="w-12 h-px bg-white/30 mx-auto mb-5" />
-          <p className="tracking-[0.22em] uppercase text-xs font-light text-white/55 mb-10">
+          <div className="w-12 h-px bg-white/50 mx-auto mb-5" />
+          <p className="tracking-[0.22em] uppercase text-sm font-light text-white/90 mb-10">
             Locally Owned &amp; Operated Communities in Oregon &amp; Washington
           </p>
           <a
             href="/our-communities"
-            className="border border-white/45 text-white text-xs font-light uppercase tracking-[0.22em] px-9 py-3.5 hover:bg-white hover:text-[#2d5a5c] transition-all duration-300"
+            className="border border-white/70 text-white text-sm font-light uppercase tracking-[0.22em] px-9 py-3.5 hover:bg-white hover:text-[#2d5a5c] transition-all duration-300"
           >
             Discover Our Communities
           </a>
@@ -34,7 +34,7 @@ export default function HomePage() {
 
       {/* ── STATS ── */}
       <section className="bg-white border-b border-gray-100 py-14 md:py-16">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-[1300px] mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {[
               { stat: '2', label: 'Communities' },
@@ -56,12 +56,12 @@ export default function HomePage() {
 
       {/* ── ADVANTAGE ── */}
       <section className="bg-gray-50 py-24 md:py-32">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="max-w-[1300px] mx-auto px-6 text-center">
           <p className="text-xs uppercase tracking-widest text-[#4a7c7e] mb-4">Who We Are</p>
           <h2 className="font-serif text-4xl md:text-[2.6rem] font-light text-[#1a1a1a] leading-snug mb-5">
             The Arcadia Senior Living Advantage
           </h2>
-          <p className="text-gray-400 text-base leading-relaxed max-w-xl mx-auto mb-16">
+          <p className="text-gray-400 text-lg leading-relaxed max-w-xl mx-auto mb-16">
             Locally owned and boutique in spirit, Arcadia offers personalized care, chef-crafted dining,
             and endless opportunities to discover joy, purpose, and community.
           </p>
@@ -73,7 +73,7 @@ export default function HomePage() {
             ].map((p) => (
               <div key={p.title} className="py-8 md:py-2 md:px-10">
                 <h3 className="font-serif text-xl font-light text-[#1a1a1a] mb-3">{p.title}</h3>
-                <p className="text-gray-400 text-[15px] leading-relaxed">{p.body}</p>
+                <p className="text-gray-400 text-lg leading-relaxed">{p.body}</p>
               </div>
             ))}
           </div>
@@ -81,13 +81,13 @@ export default function HomePage() {
       </section>
 
       {/* ── PHILOSOPHY ── */}
-      <section className="bg-gray-50 py-20 md:py-24">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+      <section className="bg-white py-20 md:py-24">
+        <div className="max-w-[1300px] mx-auto px-6 lg:px-8">
           <div className="mb-12 max-w-xl">
             <h2 className="font-serif text-4xl md:text-[2.75rem] font-light text-[#1a1a1a] mb-4">
               The Way Senior Living<br />Should Feel
             </h2>
-            <p className="text-gray-400 text-base leading-relaxed">
+            <p className="text-gray-400 text-lg leading-relaxed">
               At Arcadia, senior living is warm, personal, and filled with purpose — every detail thoughtfully
               designed so residents feel at home, supported, and truly alive.
             </p>
@@ -99,17 +99,17 @@ export default function HomePage() {
               { img: '/images/staff.jpg', title: 'Our Philosophy of Care', body: 'We believe senior living should feel like home — warm, dignified, and filled with genuine connection and belonging.', href: '/why-arcadia/#philosophy' },
               { img: '/images/respite-care.jpg', title: 'Community Connected', body: 'Arcadia fosters belonging with vibrant events, shared spaces, and a culture of kindness and inclusion.', href: '/why-arcadia/#community' },
             ].map((item) => (
-              <div key={item.title} className="bg-white overflow-hidden group">
+              <div key={item.title} className="bg-gray-50 overflow-hidden group">
                 <div className="overflow-hidden">
                   <img
                     src={item.img}
-                    className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700"
                     alt={item.title}
                   />
                 </div>
                 <div className="p-6 border-b-2 border-transparent group-hover:border-[#4a7c7e] transition-colors duration-300">
                   <h3 className="font-serif text-xl font-light text-[#1a1a1a] mb-2">{item.title}</h3>
-                  <p className="text-gray-400 text-[15px] leading-relaxed mb-4">{item.body}</p>
+                  <p className="text-gray-400 text-lg leading-relaxed mb-4">{item.body}</p>
                   <a href={item.href} className="text-[#4a7c7e] text-xs font-medium uppercase tracking-widest hover:underline">
                     Read More →
                   </a>
@@ -122,12 +122,12 @@ export default function HomePage() {
 
       {/* ── SERVICES ── */}
       <section className="bg-white py-20 md:py-24">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="max-w-[1300px] mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <h2 className="font-serif text-4xl md:text-[2.75rem] font-light text-[#1a1a1a] mb-4">
               Life in an Arcadia<br />Senior Living Community
             </h2>
-            <p className="text-gray-400 text-base leading-relaxed max-w-lg">
+            <p className="text-gray-400 text-lg leading-relaxed max-w-lg">
               At Arcadia, care is more than support — it is hospitality, warmth, and connection woven into
               everyday life.
             </p>
@@ -142,12 +142,12 @@ export default function HomePage() {
                 <div className="overflow-hidden mb-5">
                   <img
                     src={s.img}
-                    className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700"
                     alt={s.title}
                   />
                 </div>
                 <h3 className="font-serif text-2xl font-light text-[#1a1a1a] mb-2">{s.title}</h3>
-                <p className="text-gray-400 text-[15px] leading-relaxed mb-4">{s.body}</p>
+                <p className="text-gray-400 text-lg leading-relaxed mb-4">{s.body}</p>
                 <a href={s.href} className="text-[#4a7c7e] text-xs font-medium uppercase tracking-widest hover:underline">
                   Learn More →
                 </a>
@@ -159,7 +159,7 @@ export default function HomePage() {
 
       {/* ── COMMUNITIES ── */}
       <section className="bg-gray-50 py-20 md:py-24">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="max-w-[1300px] mx-auto px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
             <h2 className="font-serif text-4xl md:text-[2.75rem] font-light text-[#1a1a1a]">Our Communities</h2>
             <a href="/our-communities" className="text-[#4a7c7e] text-xs font-medium uppercase tracking-widest hover:underline flex-shrink-0">
@@ -182,10 +182,10 @@ export default function HomePage() {
               <div key={c.name} className="bg-white border border-gray-100 overflow-hidden group">
                 <div className="bg-[#2d5a5c] group-hover:bg-[#3a6e70] transition-colors duration-300 px-5 py-4">
                   <p className="text-[10px] uppercase tracking-widest text-white/45 mb-1">{c.location}</p>
-                  <h3 className="font-light text-base text-white">{c.name}</h3>
+                  <h3 className="font-light text-lg text-white">{c.name}</h3>
                 </div>
                 <div className="p-6">
-                  <p className="text-gray-400 text-[15px] leading-relaxed mb-5">{c.body}</p>
+                  <p className="text-gray-400 text-lg leading-relaxed mb-5">{c.body}</p>
                   <a href={c.href} className="text-[#4a7c7e] text-xs font-medium uppercase tracking-widest hover:underline">
                     Read More →
                   </a>
@@ -198,7 +198,7 @@ export default function HomePage() {
 
       {/* ── CAREERS ── */}
       <section className="bg-white py-20 md:py-24">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="max-w-[1300px] mx-auto px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-14 lg:gap-20 items-center">
 
             <div className="lg:w-[45%]">
@@ -206,7 +206,7 @@ export default function HomePage() {
               <h2 className="font-serif text-4xl md:text-[2.6rem] font-light text-[#1a1a1a] leading-snug mb-5">
                 Bring Your Heart &amp;<br />Make an Impact
               </h2>
-              <p className="text-gray-400 leading-relaxed mb-8 text-base">
+              <p className="text-gray-400 leading-relaxed mb-8 text-lg">
                 Working at Arcadia Senior Living means knowing your work truly matters. Every day, you&apos;ll
                 see the impact of your care in the smiles, comfort, and joy of our residents. As a growing,
                 locally owned community, we are redefining senior living for both residents and team members.

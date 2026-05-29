@@ -22,7 +22,7 @@ export default function Navbar() {
         scrolled ? 'shadow-md' : 'shadow-sm border-b border-gray-100'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-[1300px] mx-auto px-6">
         <div className="flex items-center justify-between h-[68px]">
 
           {/* Logo */}
@@ -103,7 +103,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg">
-          <nav className="max-w-6xl mx-auto px-6 py-3 flex flex-col divide-y divide-gray-100">
+          <nav className="max-w-[1300px] mx-auto px-6 py-3 flex flex-col divide-y divide-gray-100">
             <Link
               href="/why-arcadia"
               className="py-3.5 text-sm text-[#333] hover:text-[#4a7c7e] transition-colors"

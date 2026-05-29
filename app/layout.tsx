@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
+import ScrollToTop from '@/components/scroll-to-top'
 import './globals.css'
 
 const inter = Inter({
@@ -27,12 +28,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: [
-      { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
-      { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/images/logo-box.png',
+    apple: '/images/logo-box.png',
   },
 }
 
@@ -47,6 +44,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   )
