@@ -7,11 +7,11 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       aria-label="Hero"
     >
-      {/* Background image placeholder */}
+      {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/placeholder.svg?height=1080&width=1920')`,
+          backgroundImage: `url('/images/hero.jpg')`,
         }}
         aria-hidden="true"
       />
@@ -37,7 +37,7 @@ export default function HeroSection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="/communities"
+            href="/our-communities"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-white font-sans font-semibold text-sm tracking-wide hover:bg-[#3d6b4a] transition-all duration-200 shadow-lg"
           >
             Explore Our Communities

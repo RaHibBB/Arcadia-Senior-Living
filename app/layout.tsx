@@ -1,8 +1,5 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Navbar from '@/components/navbar'
-import Footer from '@/components/footer'
-import ScrollToTop from '@/components/scroll-to-top'
 import './globals.css'
 
 const inter = Inter({
@@ -113,10 +110,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessesSchema) }}
         />
-        <Navbar />
         {children}
-        <Footer />
-        <ScrollToTop />
       </body>
     </html>
   )
