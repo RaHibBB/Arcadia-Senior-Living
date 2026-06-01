@@ -5,23 +5,23 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const slides = [
   {
-    src: 'https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/09/tea-1024x768.jpg',
+    src: '/images/washougal/washougal-tea.jpg',
     alt: 'Two seniors enjoying tea at Arcadia Washougal',
   },
   {
-    src: 'https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/08/230819.Arcadia.js-211-copy-scaled.jpg-1-scaled-1-682x1024.webp',
+    src: '/images/washougal/washougal-resident-care.webp',
     alt: 'Resident at Arcadia Senior Living Washougal',
   },
   {
-    src: 'https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/09/thumbnail_20211105_111852-1024x768.jpg',
+    src: '/images/washougal/washougal-group-activity.jpg',
     alt: 'Group activity at Arcadia Washougal',
   },
   {
-    src: 'https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/08/230819.Arcadia.js-300-copy-scaled-1-1024x683.jpg',
+    src: '/images/washougal/washougal-residents.jpg',
     alt: 'Residents enjoying community life at Arcadia Washougal',
   },
   {
-    src: 'https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/09/IMG_5634-683x1024.jpg',
+    src: '/images/washougal/washougal-salon.jpg',
     alt: 'Senior woman visiting the salon at Arcadia Washougal',
   },
 ]
@@ -32,7 +32,7 @@ export default function WashougalCarousel() {
   const [current,  setCurrent]  = useState(0)
   const [previous, setPrevious] = useState<number | null>(null)
   const [paused,   setPaused]   = useState(false)
-  const clearRef = useRef<ReturnType<typeof setTimeout>>()
+  const clearRef = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   const goTo = useCallback((next: number) => {
     setCurrent(c => {

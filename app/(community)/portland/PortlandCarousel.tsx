@@ -17,7 +17,7 @@ export default function PortlandCarousel() {
   const [current,  setCurrent]  = useState(0)
   const [previous, setPrevious] = useState<number | null>(null)
   const [paused,   setPaused]   = useState(false)
-  const clearRef = useRef<ReturnType<typeof setTimeout>>()
+  const clearRef = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   const goTo = useCallback((next: number) => {
     setCurrent(c => {

@@ -8,7 +8,7 @@ export default function WashougalFooter() {
       <div className="max-w-[1340px] mx-auto px-6 lg:px-10 py-8 flex items-center justify-between flex-wrap gap-4">
         <Link href="/washougal">
           <img
-            src="https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/08/Arcadia-PORTLAND.png"
+            src="/images/washougal/washougal-logo.png"
             className="h-14 w-auto object-contain brightness-0 invert"
             alt="Arcadia Senior Living Washougal"
           />
@@ -46,8 +46,9 @@ export default function WashougalFooter() {
             <ul className="space-y-3">
               {[
                 { label: 'About Arcadia Senior Living Communities', href: '/why-arcadia' },
-                { label: 'Careers',   href: '/careers' },
-                { label: 'Resources', href: '/resources' },
+                { label: 'News & Events', href: '/washougal/news-events' },
+                { label: 'Careers',       href: '/careers' },
+                { label: 'Resources',     href: '/resources' },
               ].map(l => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-white/80 text-base hover:text-white transition-colors hover:underline underline-offset-2">

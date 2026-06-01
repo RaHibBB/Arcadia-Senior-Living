@@ -39,7 +39,7 @@ export default function CommunityHeader() {
       <div className="hidden md:block bg-[#2d5a5c]">
         <div className="max-w-[1340px] mx-auto px-8 h-10 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <a href="https://arcadiaretirement.com/" target="_blank" rel="noopener noreferrer"
+            <Link href="/"
               className="flex items-center gap-2.5 group">
               <Image
                 src="/images/arcadia-communities-logo.png"
@@ -50,7 +50,7 @@ export default function CommunityHeader() {
               <span className="text-white/70 text-xs tracking-wide group-hover:text-white transition-colors">
                 An Arcadia Community
               </span>
-            </a>
+            </Link>
           </div>
           <div className="flex items-center gap-2">
             <Phone className="w-3.5 h-3.5 text-[#c06448]" />

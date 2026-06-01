@@ -8,25 +8,25 @@ const plans = [
     name: 'Private Studio',
     desc: 'Kitchenette | Roll-in Shower | Emergency Call System | Extra Tall Ceilings | Nature Views | Pet Friendly',
     sqft: '~300+ SqFt',
-    img: 'https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/09/Assisted-Living-Studio-blueprint.png',
+    img: '/images/washougal/washougal-floorplan-studio.png',
   },
   {
     name: 'Private Studio Deluxe',
     desc: 'Kitchenette | Roll-in Shower | Emergency Call System | Extra Tall Ceilings | Nature Views | Pet Friendly',
     sqft: '350 SqFt',
-    img: 'https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/09/Studio-Deluxe.png',
+    img: '/images/washougal/washougal-floorplan-studio-deluxe.png',
   },
   {
     name: 'One Bedroom Suite',
     desc: 'Bedroom | Living Area | Kitchenette | Roll-in Shower | Emergency Call System | Extra Tall Ceilings | Nature Views | Pet Friendly',
     sqft: '500+ SqFt',
-    img: 'https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/09/1-bedroom-blueprint.png',
+    img: '/images/washougal/washougal-floorplan-1bed.png',
   },
   {
     name: 'One Bedroom Deluxe',
     desc: 'Large Bedroom | Living Room | Walk-in Closet | Kitchenette | Roll-in Shower | Emergency Call System | Nature Views | Pet Friendly',
     sqft: '600+ SqFt',
-    img: 'https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/09/1-bedroom-deluxe-blueprint.png',
+    img: '/images/washougal/washougal-floorplan-1bed-deluxe.png',
   },
 ]
 

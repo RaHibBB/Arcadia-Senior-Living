@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 import WashougalCarousel from './WashougalCarousel'
 import WashougalFloorPlanCards from './WashougalFloorPlanCards'
+import GoogleReviews from '../../(community)/portland/GoogleReviews'
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -52,17 +53,17 @@ const programs = [
 
 const wayCards = [
   {
-    img: 'https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/09/tea-1024x768.jpg',
+    img: '/images/washougal/washougal-tea.jpg',
     title: 'Wellness At The Core',
     body: 'From personalized care plans to engaging activities, we place wellness at the heart of daily life, supporting mind, body, and spirit every step of the way.',
   },
   {
-    img: 'https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/08/230819.Arcadia.js-300-copy-scaled-1-1024x683.jpg',
+    img: '/images/washougal/washougal-residents.jpg',
     title: 'Our Philosophy of Care',
     body: 'We believe senior living should feel like home, built on dignity, respect, and compassion, where every resident is known and genuinely cared for.',
   },
   {
-    img: 'https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/09/thumbnail_20211105_111852-1024x768.jpg',
+    img: '/images/washougal/washougal-group-activity.jpg',
     title: 'Community Connected',
     body: 'Arcadia fosters belonging with vibrant events, meaningful relationships, and strong ties to the local community that make life richer and more fulfilling.',
   },
@@ -71,22 +72,22 @@ const wayCards = [
 
 const events = [
   {
-    img: 'https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2026/05/last-name-flyer-pdf.jpg',
+    img: '/images/washougal/washougal-event-1.jpg',
     href: 'https://arcadiaretirement.com/washougal/new-faces-new-spaces/',
     title: 'New Faces, New Spaces',
   },
   {
-    img: 'https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/08/230819.Arcadia.js-300-copy-scaled-1-300x200.jpg',
+    img: '/images/washougal/washougal-residents.jpg',
     href: 'https://arcadiaretirement.com/washougal/celebrate-mom-mothers-day-brunch/',
     title: "Celebrate Mom – Mother's Day Brunch",
   },
   {
-    img: 'https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/09/tea-300x225.jpg',
+    img: '/images/washougal/washougal-tea.jpg',
     href: 'https://arcadiaretirement.com/washougal/love-where-you-live-our-sweet-february-move-in-special/',
     title: 'Love Where You Live – February 2026 Move-in Special',
   },
   {
-    img: 'https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/09/thumbnail_20211105_111852-300x225.jpg',
+    img: '/images/washougal/washougal-group-activity.jpg',
     href: 'https://arcadiaretirement.com/washougal/medicare-aep-seminar-washougal/',
     title: 'Medicare AEP Seminar Washougal',
   },
@@ -165,7 +166,7 @@ export default function WashougalPage() {
           <div className="flex items-center gap-6">
             <div className="flex-1 h-[3px] bg-gradient-to-r from-[#c06448] to-[#4a7c7e]" />
             <img
-              src="https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/09/Transparent-Logo-with-box-1.png"
+              src="/images/washougal/washougal-logo.png"
               className="h-16 w-auto"
               alt="Arcadia Senior Living"
             />
@@ -215,7 +216,7 @@ export default function WashougalPage() {
             </div>
             <div className="hidden lg:block">
               <img
-                src="https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/09/IMG_5634-683x1024.jpg"
+                src="/images/washougal/washougal-salon.jpg"
                 className="w-full h-full object-cover"
                 alt="Resident at Arcadia Washougal salon"
               />
@@ -287,7 +288,7 @@ export default function WashougalPage() {
             </div>
             <div>
               <img
-                src="https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/08/230819.Arcadia.js-211-copy-scaled.jpg-1-scaled-1-682x1024.webp"
+                src="/images/washougal/washougal-resident-care.webp"
                 alt="Arcadia staff providing care in Washougal"
                 className="w-full h-96 object-cover object-top"
               />
@@ -338,7 +339,7 @@ export default function WashougalPage() {
             </div>
             <div>
               <img
-                src="https://arcadiaretirement.com/washougal/wp-content/uploads/sites/5/2025/09/thumbnail_20211105_111852-1024x768.jpg"
+                src="/images/washougal/washougal-group-activity.jpg"
                 alt="Senior resident at Arcadia Washougal"
                 className="w-full h-80 object-cover"
               />
@@ -405,39 +406,7 @@ export default function WashougalPage() {
           <h2 className="font-serif text-3xl md:text-4xl text-[#2d5a5c] mb-10 text-center">
             Families Share Their Arcadia Experience
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                name: 'Scott Greenwood',
-                relation: 'Child of resident',
-                stars: 5,
-                text: 'The facility is terrific, the residents seem genuinely happy and well cared for, and I know there is a tremendous sense of love for their residents. Thank you Arcadia.',
-              },
-              {
-                name: 'Joyce R.',
-                relation: 'Family member',
-                stars: 5,
-                text: 'The staff at Arcadia Washougal are so caring and attentive. My mother loves it here — she has made wonderful friends and is happier than ever.',
-              },
-              {
-                name: 'Sandra M.',
-                relation: 'Family member',
-                stars: 5,
-                text: 'We toured several facilities before choosing Arcadia Lookout Ridge. The personal touch, the views, and the community feel made it an easy decision.',
-              },
-            ].map((r, i) => (
-              <div key={i} className="bg-[#f9f9f9] p-6 rounded-lg">
-                <div className="flex gap-1 mb-3">
-                  {Array.from({ length: r.stars }).map((_, s) => (
-                    <svg key={s} className="w-4 h-4 fill-yellow-400" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
-                  ))}
-                </div>
-                <p className="text-[#555] text-sm leading-relaxed mb-3">"{r.text}"</p>
-                <p className="font-semibold text-[#2d5a5c] text-sm">— {r.name}</p>
-                <p className="text-[#888] text-xs">{r.relation}</p>
-              </div>
-            ))}
-          </div>
+          <GoogleReviews />
         </div>
       </section>
 
