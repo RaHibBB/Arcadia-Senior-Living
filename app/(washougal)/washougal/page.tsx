@@ -102,7 +102,7 @@ export default function WashougalPage() {
       {/* ── HERO ── */}
       <section className="relative min-h-[480px] md:min-h-[580px] flex items-center bg-[#2d5a5c] overflow-hidden">
         <img
-          src="/images/washougal-exterior.jpg"
+          src="/images/washougal/washougal-hero.png"
           className="absolute inset-0 w-full h-full object-cover opacity-40"
           alt="" aria-hidden="true"
         />
